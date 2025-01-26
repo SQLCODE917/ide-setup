@@ -18,6 +18,10 @@ axiomatic understandings:
 - `<c-[KEY]` - c for the control key
 - `<c-o>` - go back to previous position
 - `<c-g>` - print the current file name
+- Marks:
+    - `ma` - set mark `a` at cursor
+    - `'a` - jump to mark line `a`
+    - `\a` - jump to mark `a`
 
 .vimrc
 - [vim-plug](https://github.com/junegunn/vim-plug) for plugins management
