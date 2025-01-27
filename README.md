@@ -15,7 +15,7 @@ Dotfiles and configs:
 
 axiomatic understandings:
 - `<leader>` key is `\`
-- `<c-[KEY]` - c for the control key
+- `<c-[KEY]>` - c for the control key
 - `<c-o>` - go back to previous position
 - `<c-g>` - print the current file name
 - Marks:
@@ -31,9 +31,9 @@ axiomatic understandings:
     - `:Ag [PATTERN]` - [ag](https://github.com/ggreer/the_silver_searcher) search result
     - `:Rg [PATTERN]` - [rg](https://github.com/BurntSushi/ripgrep) search in current repo
     - `:RG [PATTERN]` - [rg](https://github.com/BurntSushi/ripgrep) search in current repo; relaunch ripgrep on every keystroke
-    - `<c-t>` / `CTRL-X` / `CTRL-V` - open in a new tab, a new split, or in a new vertical split
+    - `CTRL-t` / `CTRL-x` / `CTRL-v` - open in a new tab, a new split, or in a new vertical split
 - [ALE](https://github.com/dense-analysis/ale) for linting w/prettier and eslint
-    - `<leader>aj` / `<leader` - jump to the next / previous error
+    - `<leader>aj` / `<leader>ak` - jump to the next / previous error
     - `<c-]>` - go to the definition
     - `K` - hover info
     - `gr` - find references
