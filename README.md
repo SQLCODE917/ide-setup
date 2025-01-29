@@ -13,6 +13,22 @@ Dotfiles and configs:
 
 ### Vim
 
+- install [vim](https://github.com/vim/vim.git) from source because you need Vim 901 or above for llama.vim
+(Assumes you already have Ruby and Python installed)
+```
+git clone https://github.com/vim/vim.git
+cd vim && ./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp
+make
+sudo make install
+```
+- replace whatever vim you have with the new one. On my WSL2 Ubuntu:
+```
+sudo update-alternatives --install /usr/bin/vim vim [path-to-vim-repo]/src/vim 100
+sudo update-alternatives --config vim
+
+vim --version
+```
+
 axiomatic understandings:
 - `<leader>` key is `\`
 - `<c-[KEY]>` - c for the control key
