@@ -97,3 +97,35 @@ ARG NODE_VERSION
 ...
 RUN nvm install ${NODE_VERSION}
 ```
+
+### How to inspect container network traffic
+
+I want to spin up the whole stack and use a feature, then see what network traffic is going on.
+Onboarding and debugging when "the truth is in the code".
+
+tcpdump as the solution:
+for every service, add a tcpdump container that will get you those nice pcap's
+
+```docker-compose.yml
+services:
+  webapp:
+    ...
+  tcpdump_webapp:
+    image: nicolaka/netshoot
+    depends_on:
+      - webapp
+    command: tcpdump -i eth0 -A -w /logs/webapp_traffic.pcap
+    network_mode: "service:webapp"
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+    volumes:
+      - ./logs:/logs
+```
+
+[trayce](https://trayce.dev/) as a solution:
+UI that shows web traffic.
+I have found it to not include all the traffic, but it's a user-friendly starting point
+
+[traefik](https://traefik.io/) as a possible solution
+TO EVALUATE
