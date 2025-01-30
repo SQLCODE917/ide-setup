@@ -38,6 +38,8 @@ axiomatic understandings:
     - `ma` - set mark `a` at cursor
     - `'a` - jump to mark line `a`
     - `\a` - jump to mark `a`
+- Terminal:
+    - `:ter[minal]` - open a new terminal in a new split
 
 .vimrc
 - [vim-plug](https://github.com/junegunn/vim-plug) for plugins management
