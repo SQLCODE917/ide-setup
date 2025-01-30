@@ -50,6 +50,8 @@ augroup FileTypeSettings
   autocmd FileType javascript,json,typescript,*.scss setlocal tabstop=2 shiftwidth=2 expandtab
   autocmd FileType html setlocal tabstop=4 shiftwidth=4 expandtab
   autocmd BufRead,BufNewFile */aftershock/*.js setlocal tabstop=4 shiftwidth=4 expandtab
+  autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
+  autocmd FileType h,c setlocal tabstop=2 shiftwidth=2 expandtab
 augroup END
 
 " Initialize configuration dictionary
@@ -92,14 +94,9 @@ vnoremap <leader>qf :ALECodeAction<CR>
 
 let js_fixers = ['prettier', 'eslint']
 
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': js_fixers,
-\   'javascript.jsx': js_fixers,
-\   'typescript': js_fixers,
-\   'typescriptreact': js_fixers,
-\   'css': ['prettier'],
-\   'json': ['prettier'],
-\}
+let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'],'javascript': js_fixers,'javascript.jsx': js_fixers,'typescript': js_fixers,'typescriptreact': js_fixers,'css': ['prettier'],'json': ['prettier']}
 
 let g:ale_fix_on_save = 1
+
+" LA
+let g:llama_config= {}
